@@ -1,0 +1,57 @@
+{
+  "XGBoost": {
+    "kind": "xgb",
+    "k": 21,
+    "params": {
+      "n_estimators": 500,
+      "max_depth": 2,
+      "learning_rate": 0.024810796826900645,
+      "subsample": 0.6916733635157528,
+      "colsample_bytree": 0.6914088770174271,
+      "min_child_weight": 5,
+      "reg_lambda": 0.06178927781980922,
+      "reg_alpha": 0.21968947309510675
+    },
+    "best_cv_roc_auc": 0.9069304029304031
+  },
+  "LightGBM": {
+    "kind": "lgbm",
+    "k": 16,
+    "params": {
+      "n_estimators": 450,
+      "num_leaves": 27,
+      "max_depth": 5,
+      "learning_rate": 0.010870981745483252,
+      "min_child_samples": 28,
+      "subsample": 0.734384609465867,
+      "subsample_freq": 1,
+      "colsample_bytree": 0.747852870408951,
+      "reg_lambda": 0.08418838115315477
+    },
+    "best_cv_roc_auc": 0.9064761904761903
+  },
+  "CatBoost": {
+    "kind": "cat",
+    "k": 20,
+    "params": {
+      "iterations": 200,
+      "depth": 5,
+      "learning_rate": 0.010789674731541453,
+      "l2_leaf_reg": 9.103451328205942
+    },
+    "best_cv_roc_auc": 0.9035750915750915
+  },
+  "HistGradientBoosting": {
+    "kind": "hgb",
+    "k": 22,
+    "params": {
+      "max_iter": 200,
+      "max_depth": 6,
+      "learning_rate": 0.02011765534306097,
+      "max_leaf_nodes": 29,
+      "min_samples_leaf": 35,
+      "l2_regularization": 1.4858548724015517
+    },
+    "best_cv_roc_auc": 0.9044468864468863
+  }
+}

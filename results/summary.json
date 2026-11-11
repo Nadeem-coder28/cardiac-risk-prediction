@@ -1,0 +1,227 @@
+{
+  "dataset": "UCI Heart Disease (Cleveland), 303 records, 13 attributes, binary target",
+  "class_counts": {
+    "no_disease": 164,
+    "disease": 139
+  },
+  "missing_values": {
+    "ca": 4,
+    "thal": 2
+  },
+  "split": "stratified 80:20, seed 42",
+  "outliers_removed_from_training_set": 8,
+  "training_records_after_cleaning": 234,
+  "test_records": 61,
+  "features_after_encoding": 22,
+  "cv_folds": 5,
+  "optuna_trials_per_model": 40,
+  "optuna_objective": "mean 5-fold stratified CV ROC-AUC (training set)",
+  "selected_k": {
+    "XGBoost": 21,
+    "LightGBM": 16,
+    "CatBoost": 20,
+    "HistGradientBoosting": 22
+  },
+  "selected_features": {
+    "XGBoost": [
+      "age",
+      "trestbps",
+      "chol",
+      "thalach",
+      "oldpeak",
+      "ca",
+      "sex",
+      "fbs",
+      "exang",
+      "cp_1.0",
+      "cp_2.0",
+      "cp_3.0",
+      "cp_4.0",
+      "restecg_0.0",
+      "restecg_1.0",
+      "restecg_2.0",
+      "slope_1.0",
+      "slope_2.0",
+      "thal_3.0",
+      "thal_6.0",
+      "thal_7.0"
+    ],
+    "LightGBM": [
+      "age",
+      "chol",
+      "thalach",
+      "oldpeak",
+      "ca",
+      "sex",
+      "exang",
+      "cp_2.0",
+      "cp_3.0",
+      "cp_4.0",
+      "restecg_0.0",
+      "restecg_2.0",
+      "slope_1.0",
+      "slope_2.0",
+      "thal_3.0",
+      "thal_7.0"
+    ],
+    "CatBoost": [
+      "age",
+      "trestbps",
+      "chol",
+      "thalach",
+      "oldpeak",
+      "ca",
+      "sex",
+      "exang",
+      "cp_1.0",
+      "cp_2.0",
+      "cp_3.0",
+      "cp_4.0",
+      "restecg_0.0",
+      "restecg_1.0",
+      "restecg_2.0",
+      "slope_1.0",
+      "slope_2.0",
+      "thal_3.0",
+      "thal_6.0",
+      "thal_7.0"
+    ],
+    "HistGradientBoosting": [
+      "age",
+      "trestbps",
+      "chol",
+      "thalach",
+      "oldpeak",
+      "ca",
+      "sex",
+      "fbs",
+      "exang",
+      "cp_1.0",
+      "cp_2.0",
+      "cp_3.0",
+      "cp_4.0",
+      "restecg_0.0",
+      "restecg_1.0",
+      "restecg_2.0",
+      "slope_1.0",
+      "slope_2.0",
+      "slope_3.0",
+      "thal_3.0",
+      "thal_6.0",
+      "thal_7.0"
+    ]
+  },
+  "meta_learner": "Logistic regression on base learners' out-of-fold probabilities",
+  "best_hyperparameters": {
+    "XGBoost": {
+      "n_estimators": 500,
+      "max_depth": 2,
+      "learning_rate": 0.024810796826900645,
+      "subsample": 0.6916733635157528,
+      "colsample_bytree": 0.6914088770174271,
+      "min_child_weight": 5,
+      "reg_lambda": 0.06178927781980922,
+      "reg_alpha": 0.21968947309510675
+    },
+    "LightGBM": {
+      "n_estimators": 450,
+      "num_leaves": 27,
+      "max_depth": 5,
+      "learning_rate": 0.010870981745483252,
+      "min_child_samples": 28,
+      "subsample": 0.734384609465867,
+      "subsample_freq": 1,
+      "colsample_bytree": 0.747852870408951,
+      "reg_lambda": 0.08418838115315477
+    },
+    "CatBoost": {
+      "iterations": 200,
+      "depth": 5,
+      "learning_rate": 0.010789674731541453,
+      "l2_leaf_reg": 9.103451328205942
+    },
+    "HistGradientBoosting": {
+      "max_iter": 200,
+      "max_depth": 6,
+      "learning_rate": 0.02011765534306097,
+      "max_leaf_nodes": 29,
+      "min_samples_leaf": 35,
+      "l2_regularization": 1.4858548724015517
+    }
+  },
+  "test_results": {
+    "Logistic Regression": {
+      "Accuracy": 0.8525,
+      "Precision": 0.8065,
+      "Recall": 0.8929,
+      "F1-score": 0.8475,
+      "ROC-AUC": 0.947,
+      "CV ROC-AUC mean": 0.8573,
+      "CV ROC-AUC sd": 0.0648
+    },
+    "Random Forest": {
+      "Accuracy": 0.9016,
+      "Precision": 0.8438,
+      "Recall": 0.9643,
+      "F1-score": 0.9,
+      "ROC-AUC": 0.9351,
+      "CV ROC-AUC mean": 0.8876,
+      "CV ROC-AUC sd": 0.0627
+    },
+    "XGBoost": {
+      "Accuracy": 0.8689,
+      "Precision": 0.8333,
+      "Recall": 0.8929,
+      "F1-score": 0.8621,
+      "ROC-AUC": 0.9459,
+      "CV ROC-AUC mean": 0.8843,
+      "CV ROC-AUC sd": 0.0491
+    },
+    "LightGBM": {
+      "Accuracy": 0.8689,
+      "Precision": 0.8333,
+      "Recall": 0.8929,
+      "F1-score": 0.8621,
+      "ROC-AUC": 0.9545,
+      "CV ROC-AUC mean": 0.8936,
+      "CV ROC-AUC sd": 0.0517
+    },
+    "CatBoost": {
+      "Accuracy": 0.8361,
+      "Precision": 0.7812,
+      "Recall": 0.8929,
+      "F1-score": 0.8333,
+      "ROC-AUC": 0.9416,
+      "CV ROC-AUC mean": 0.8916,
+      "CV ROC-AUC sd": 0.0582
+    },
+    "HistGradientBoosting": {
+      "Accuracy": 0.8852,
+      "Precision": 0.8621,
+      "Recall": 0.8929,
+      "F1-score": 0.8772,
+      "ROC-AUC": 0.9513,
+      "CV ROC-AUC mean": 0.8876,
+      "CV ROC-AUC sd": 0.0501
+    },
+    "Stacked Ensemble": {
+      "Accuracy": 0.8852,
+      "Precision": 0.8621,
+      "Recall": 0.8929,
+      "F1-score": 0.8772,
+      "ROC-AUC": 0.9481,
+      "CV ROC-AUC mean": 0.8902,
+      "CV ROC-AUC sd": 0.0518
+    }
+  },
+  "library_versions": {
+    "numpy": "2.4.6",
+    "pandas": "2.2.3",
+    "sklearn": "1.6.1",
+    "xgboost": "3.4.1",
+    "lightgbm": "4.7.0",
+    "catboost": "1.2.10",
+    "optuna": "5.0.0",
+    "imblearn": "0.14.2"
+  }
+}
