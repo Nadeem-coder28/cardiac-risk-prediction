@@ -2,8 +2,8 @@
 
 A machine learning framework for heart disease prediction that combines stacked gradient boosting with Bayesian hyperparameter tuning.
 
-**Mohammad Nadeem, Parupalli Bhargav Kumar**
-School of Computer Science Engineering and Technology, Bennett University
+**Mohammad Nadeem, Parupalli Bhargav Kumar**<br>
+School of Computer Science Engineering and Technology, Bennett University<br>
 Supervised by Dr. Shailza Kanwar
 
 *Undergraduate research project carried out in 2025 at Bennett University under the supervision of Dr. Shailza Kanwar. The code was re-implemented and published in 2026.*
