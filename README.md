@@ -8,6 +8,8 @@ Supervised by Dr. Shailza Kanwar
 
 *Undergraduate research project carried out in 2025 at Bennett University under the supervision of Dr. Shailza Kanwar. The code was re-implemented and published in 2026.*
 
+**Project report:** [Undergraduate Research Project Report (PDF)](https://drive.google.com/file/d/1e9OU6Sa_k6VALRGsKXzCQK18pECyCG5N/view?usp=sharing)
+
 ## Method
 
 1. **Data:** UCI Heart Disease dataset (Cleveland data), 303 patients, 13 clinical attributes, binary target (164 without and 139 with heart disease)
